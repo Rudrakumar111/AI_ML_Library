@@ -1,0 +1,7 @@
+{
+    "name": "data.json",
+    "version": "1.0",
+    "description": "A JSON file containing metadata about the project.",
+    "author": "Rudrakumar",
+    "license": "MIT"
+}

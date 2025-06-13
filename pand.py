@@ -1,5 +1,5 @@
-import pandas as pd
-import numpy as np
+# import pandas as pd
+# import numpy as np
 
 # data = np.array([[1,2,3],[2,3,34],[3,5,76]])
 # flat_data = data.flatten()
@@ -89,18 +89,75 @@ import numpy as np
 # print(s.apply(lambda x:x*2))
 
 
+#DataFrame
+# import pandas as pd
+# mydataset = {
+#   'cars': ["BMW", "Volvo", "Ford","jkdsf","klsdjf","kldsjf","ksdjf","a","sdf"],
+#   'passings': [3, 7,4,3,5,3,5,3,5]
+# }
+
+# a = pd.DataFrame(mydataset)
+
+# print(a)
+# print(pd.__version__)
+
+# calories = {"day1": 420, "day2": 380, "day3": 390}
+
+# myvar = pd.Series(calories)
+
+# print(myvar)
+
+# b = [0,2,3,4,6,2]
+# print(a)
+# print(a.loc[0]['cars'])
+# print(a.loc[b])
 
 
-# DATAFRAME
-df = pd.read_csv('demo.csv')
-df.to_csv('out.csv',index=False)
+#DataFrame with JSON
+import pandas as pd
+import json
+import matplotlib.pyplot as plt
 
-print(df.head())
-print(df.tail(10))
-print(df.describe())
+# df = pd.read_json('data.json')
 
-# a = df.iloc[0:2,0:3]
-# df.loc[2,'a']
+# with open("data.json", "r") as f:
+#     data = json.load(f)
 
-a = df['Roll_number']
-print(a)
+# a = [data]
+# print(data)
+
+# df = pd.read_json('data.js')
+# print(df.to_string())
+
+# df = pd.read_csv('demo.csv')
+# print(df.head(2))
+# print(df.dropna())
+
+# df = pd.read_csv('unClean.csv')
+# print(df.dropna())
+# print(df.fillna(100))
+
+# df['D'] = pd.to_datetime(df['Date'])
+
+# a = df
+# a.dropna(subset=['Date'], inplace = True)
+
+# print(df.head())
+
+# df.loc[31]['Maxpulse'] = 100
+
+# print(df)
+
+# df.drop_duplicates(inplace = True)
+
+# print(df.to_string())
+
+df = pd.read_csv('unClean.csv',delim_whitespace=True)
+
+# print(df.dropna(inplace=True))
+# df.plot(kind = 'hist', x = 'Maxpulse', y = 'Calories')
+# df.plot()
+
+# df['Duration'].plot(kind="hist")
+# plt.show()
+print(df.duplicated())
