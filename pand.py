@@ -152,7 +152,7 @@ import matplotlib.pyplot as plt
 
 # print(df.to_string())
 
-df = pd.read_csv('unClean.csv',delim_whitespace=True)
+# df = pd.read_csv('unClean.csv',delim_whitespace=True)
 
 # print(df.dropna(inplace=True))
 # df.plot(kind = 'hist', x = 'Maxpulse', y = 'Calories')
@@ -160,4 +160,4 @@ df = pd.read_csv('unClean.csv',delim_whitespace=True)
 
 # df['Duration'].plot(kind="hist")
 # plt.show()
-print(df.duplicated())
+# print(df.duplicated())
